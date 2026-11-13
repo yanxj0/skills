@@ -1,11 +1,12 @@
 ---
 name: vue-style
 description: Create or edit Vue 3 components in this EMC Analyzer project using its Composition API, SFC, styling, and component organization conventions.
+disable-model-invocation: false
 ---
 
 # Vue Style
 
-Use this skill when creating or changing Vue components and views in this repository.
+Use this skill when creating or changing Vue components and views in this repository. For JavaScript in Vue SFC script blocks, also follow the sibling `javascript-style` skill (`../javascript-style/SKILL.md`), including its responsibility, function length, design, and documentation guidance.
 
 ## Project conventions
 
@@ -15,7 +16,7 @@ Use this skill when creating or changing Vue components and views in this reposi
 - Use Pinia for shared application state, following existing stores in `src/stores`.
 - Keep API access in `src/api`; use existing request helpers and established response handling.
 - Place page-level views under `src/views` and reusable UI under `src/components` or the relevant view's `components` directory. Follow the existing `index.vue` convention for directory entry components.
-- Prefer the project's existing Tailwind utilities for straightforward layout and styling. Use SCSS for styles that benefit from nesting, pseudo-elements, or component-specific rules; use `scoped` when styles should remain component-local.
+- Prefer Tailwind CSS utility classes for layout and styling wherever practical. Use SCSS for `::before`, `::after`, or other styles when Tailwind classes would become excessively long or hard to read; use `scoped` when styles should remain component-local.
 - Use single quotes and omit semicolons in script code, consistent with Oxfmt configuration.
 - Use business-meaningful component, prop, and state names. Follow nearby files for casing and event conventions.
 
